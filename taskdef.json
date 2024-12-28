@@ -1,9 +1,8 @@
 {
-    "family": "cloudtech-reservation-api-task",
     "containerDefinitions": [
         {
             "name": "reservation-ecs",
-            "image": "<IMAGE_NAME>",
+            "image":  "<IMAGE_NAME>",
             "cpu": 0,
             "portMappings": [
                 {
@@ -15,6 +14,11 @@
                 }
             ],
             "essential": true,
+            "environment": [],
+            "environmentFiles": [],
+            "mountPoints": [],
+            "volumesFrom": [],
+            "ulimits": [],
             "logConfiguration": {
                 "logDriver": "awslogs",
                 "options": {
@@ -24,12 +28,46 @@
                     "max-buffer-size": "25m",
                     "awslogs-region": "ap-northeast-1",
                     "awslogs-stream-prefix": "ecs"
-                }
-            }
+                },
+                "secretOptions": []
+            },
+            "systemControls": []
         }
     ],
+    "family": "cloudtech-reservation-api-task",
     "executionRoleArn": "arn:aws:iam::339712923306:role/ecsTaskExecutionRole",
     "networkMode": "awsvpc",
+    "revision": 2,
+    "volumes": [],
+    "status": "ACTIVE",
+    "requiresAttributes": [
+        {
+            "name": "com.amazonaws.ecs.capability.logging-driver.awslogs"
+        },
+        {
+            "name": "ecs.capability.execution-role-awslogs"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.19"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.28"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.18"
+        },
+        {
+            "name": "ecs.capability.task-eni"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.29"
+        }
+    ],
+    "placementConstraints": [],
+    "compatibilities": [
+        "EC2",
+        "FARGATE"
+    ],
     "requiresCompatibilities": [
         "FARGATE"
     ],
@@ -38,5 +76,8 @@
     "runtimePlatform": {
         "cpuArchitecture": "X86_64",
         "operatingSystemFamily": "LINUX"
-    }
+    },
+    "registeredAt": "2024-12-28T06:21:16.636Z",
+    "registeredBy": "arn:aws:iam::339712923306:user/Administrator",
+    "enableFaultInjection": false
 }
