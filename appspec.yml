@@ -4,7 +4,3 @@ Resources:
       Type: AWS::ECS::Service
       Properties:
         TaskDefinition: "<TASK_DEFINITION>"
-        LoadBalancerInfo:
-          ContainerName: "reservation-ecs"
-          ContainerPort: 80
-          
