@@ -22,3 +22,5 @@ artifacts:
     - imageDetail.json
     - appspec.yml
     - taskdef.json
+  discard-paths: no
+  base-directory: .
